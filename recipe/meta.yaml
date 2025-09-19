@@ -1,5 +1,5 @@
 {% set name = "ydb" %}
-{% set version = "3.21.10" %}
+{% set version = "3.21.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ydb-{{ version }}.tar.gz
-  sha256: 4b821f133abb23f2fdb1140d359749875e83a5abc1b118ead41e847416240e5d
+  sha256: 6ba6fc0004eefb7e136e4d3478d08cdbfc8f3ccfeff46ce88a8eea5a3bf20bcf
 
 build:
   noarch: python
