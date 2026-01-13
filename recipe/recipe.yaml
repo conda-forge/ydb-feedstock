@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ydb
-  version: 3.23.0
+  version: "3.23.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ydb-${{ version }}.tar.gz
-  sha256: 62fbd38923276083db5b719a7678e8398b5a8bfa180a8a26bb570c66d4417d5a
+  sha256: 177d8cf6c37f036879b9244e6394de1b2a88de2d244f06db8bf41d98afbd54ca
 
 build:
   noarch: python
