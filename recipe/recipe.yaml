@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ydb
-  version: "3.24.0"
+  version: 3.26.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ydb-${{ version }}.tar.gz
-  sha256: 9c9d30a732e3e5688b1ebb20116331932835501df4485e1ee5add9fdd42de20e
+  sha256: b10bfd02a780ea26335c4884dd482f94adc9e7bcaac91b7e32171ab441ff56b1
 
 build:
   noarch: python
@@ -26,9 +26,8 @@ requirements:
     - python >=${{ python_min }}
     - grpcio >=1.42.0
     - packaging
-    - protobuf >=3.13.0,<6.0.0
+    - protobuf >=3.13.0,<7.0.0
     - aiohttp <4
-
 tests:
   - python:
       imports:
