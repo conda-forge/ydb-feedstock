@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ydb
-  version: "3.31.2"
+  version: "3.31.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ydb-${{ version }}.tar.gz
-  sha256: 7641a9f3e370412f2e801abdbb552131945f6062f4a0019d3644f14bd5d48ef8
+  sha256: b62f62a642c2af5a55773190e4da1316cbfa1191ff6b4572bae435015cefcec3
 
 build:
   noarch: python
@@ -33,7 +33,9 @@ tests:
       imports:
         - ydb
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: http://github.com/ydb-platform/ydb-python-sdk
